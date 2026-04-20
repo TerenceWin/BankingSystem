@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset = "UTF-8">
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', path='/css/signUp.css') }}">
+
+        <title>Login Page</title>
+    </head>
+    <body>
+        <div class="pageContainer">
+            <div class="leftPanel">
+                <div class="loginPanel">
+                    <div class="loginHeader">
+                            <h1>Get Started Now</h1>
+                    </div>
+                    <div class="loginSection">
+                        <div class="infoSection">
+                            <div class="inputSection">
+                                <p>Username</p>
+                                <textarea placeholder="Enter your username"></textarea>
+                            </div>
+                            <div class="inputSection">
+                                <p>Email address</p>
+                                <textarea placeholder="Enter your email" ></textarea>
+                            </div>
+                            <div class="inputSection">
+                                <p>Password</p>
+                                <textarea placeholder="Name" ></textarea>
+                            </div>
+                            <div>
+                                <button class="agreeButton"></button>
+                                <span class="agreeText">I agree to the terms & policy</span>
+                            </div>
+                            <button class="signUpButton">
+                                <span>Sign up</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="divider">
+                    </div>
+                    <div class="loginFooter">
+                        <div class="signInButtonsDiv">
+                            <button class="signIntButtons googleButton">
+                                <img src="{{ url_for('static', path='/assets/google.svg.png') }}" alt="google" class="icon"/>
+                                <span>Sign in with Google</span>
+                            </button>
+                            <button class="signIntButtons appleButton">
+                                <img src="{{ url_for('static', path='/assets/apple.png') }}" alt="apple" class="icon"/>
+                                <span>Sign in with Apple</span>
+                            </button>
+                        </div>
+                        <div class="haveAccountDiv">
+                            <p>Have an account? <a link="/">Sign in</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="rightPanel">
+            </div>
+        </div>
+    </body>
+</html>
