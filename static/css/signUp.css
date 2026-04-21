@@ -8,7 +8,7 @@ body{
 }
 
 .pageContainer{
-    width: 100%;
+    min-width: 100vw;
     height: 100%; 
     flex: 1;
     padding: 0; margin: 0; box-sizing: border-box;
@@ -23,11 +23,19 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f3f3f3;
 }
 
 .rightPanel{
     width: 50%; 
+    height: 100vh; 
 }
+
+.plantImage{
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+} 
 
 .loginPanel{
     width: 60%;     
@@ -96,21 +104,27 @@ body{
     padding-bottom: 2px;
 }
 
+.agreeDiv:hover{
+    cursor: pointer;
+}
+
 .signUpButton{
-    all: unset; 
+    all: unset;
     background-color: #3b5b22;
-    height: 30px; 
-    padding: 5px; 
+    height: 30px;
+    padding: 5px;
     font-size: 16px; font-weight: 600;
     border-radius: 10px;
     color: #fff;
     text-align: center;
-    transition: filter 0.3s ease; 
+    transition: background-color 0.3s ease;
+    cursor: pointer;
 }
+
 
 .signUpButton:hover{
     cursor: pointer;
-
+    background-color: #527e30
 }
 
 
@@ -128,8 +142,8 @@ body{
     width: 30px; 
     font-size: 14px;
     top: -10px; 
-    left: 49%; 
-    background-color: #fff;
+    left: 48%; 
+    background-color: #f3f3f3;
     text-align: center;   
 }
 
@@ -150,8 +164,8 @@ body{
     border: none;
     border-radius: 10px;
     padding: 8px 20px; 
-    background-color: #fff;
-    transition: filter 0.3s ease;
+    background-color: #f3f3f3;
+    transition: background-color 0.3s ease;
 
 }
 
@@ -164,7 +178,8 @@ body{
 }
 
 .googleButton:hover, .appleButton:hover {
-    filter: brightness(0.7);
+    background-color: #bcbcbc;
+    box-shadow: 0 0 10px #919191;
 }
 
 .haveAccountDiv{
@@ -181,13 +196,28 @@ body{
     font-weight: 600;
 }
 
-.haveAccountDiv a{
+.signInLink{
     color: rgb(52, 147, 255);
     margin-left: 10px; 
+    transition: text-decoration 0.6s ease; 
+}
+
+.signInLink:hover{
+    cursor: pointer;
+    text-decoration: underline;
 }
 
 @media (max-width: 1900px){
     .loginHeader h1{
         font-size: 36px;
+    }
+}
+
+@media (max-width: 1360px){
+    .rightPanel{
+        display: none;
+    }
+    .leftPanel{
+        width: 100%;
     }
 }
